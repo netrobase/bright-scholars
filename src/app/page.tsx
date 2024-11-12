@@ -1,16 +1,15 @@
-import {Header} from "@/sections/Header";
+
 import { Hero } from "@/sections/Hero";
-import {Footer} from "@/sections/Footer";
-import { CallToAction } from "@/sections/CallToAction";
+import { About } from "@/sections/About";
+import { Gallery } from "@/sections/Gallery";
 
 export default function Home() {
   return (
   
   <div>
-    <Header/>
     <Hero/>
-    <CallToAction/>
-    <Footer/>
+    <About/>
+    <Gallery/>
   </div>
   
 );
