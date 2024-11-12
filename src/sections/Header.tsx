@@ -1,9 +1,17 @@
+"use client"
+import { useState } from "react";
 import LogoIcon from "@/assets/logo.svg";
 import MenuIcon from "@/assets/icon-menu.svg";
 import { Button } from "@/components/Button";
 import Link from "next/link";
 
 export const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <header className="py-4 border-b border-white/15 md:border-none sticky top-0 z-10">
       <div className="container">
@@ -13,6 +21,8 @@ export const Header = () => {
               <LogoIcon className="h-8 w-8" />
             </div>
           </div>
+
+          {/* Desktop Navigation */}
           <div className="hidden md:block">
             <nav className="flex gap-8 text-sm">
               <Link href="#" className="text-white/70 hover:text-white transition">
@@ -22,18 +32,38 @@ export const Header = () => {
                 About
               </Link>
               <Link href="#" className="text-white/70 hover:text-white transition">
-                 
+                Services
               </Link>
               <Link href="#" className="text-white/70 hover:text-white transition">
                 Gallery
               </Link>
             </nav>
           </div>
+
+          {/* Mobile Menu Icon */}
           <div className="flex gap-4 items-center">
             <Button>School Portal</Button>
-            <MenuIcon className="md:hidden" />
+            <MenuIcon className="md:hidden cursor-pointer" onClick={toggleMenu} />
           </div>
         </div>
+
+        {/* Mobile Navigation */}
+        {menuOpen && (
+          <nav className="md:hidden mt-4 space-y-4 text-left px-5">
+            <Link href="#" className="text-white/70 hover:text-white transition block">
+              Home
+            </Link>
+            <Link href="#" className="text-white/70 hover:text-white transition block">
+              About
+            </Link>
+            <Link href="#" className="text-white/70 hover:text-white transition block">
+              Services
+            </Link>
+            <Link href="#" className="text-white/70 hover:text-white transition block">
+              Gallery
+            </Link>
+          </nav>
+        )}
       </div>
     </header>
   );
