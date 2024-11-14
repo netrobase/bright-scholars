@@ -6,7 +6,7 @@
 
 
 ```
-git clone https://github.com/your-username/kralis-school-website-hub.git
+git clone https://github.com/netrobase/kralis-template-b.git
 ```
 
 ## Install dependencies
