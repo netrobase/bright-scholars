@@ -32,9 +32,6 @@ export const Header = () => {
                 About
               </Link>
               <Link href="#" className="text-white/70 hover:text-white transition">
-                Services
-              </Link>
-              <Link href="#" className="text-white/70 hover:text-white transition">
                 Gallery
               </Link>
             </nav>
@@ -55,9 +52,6 @@ export const Header = () => {
             </Link>
             <Link href="#" className="text-white/70 hover:text-white transition block">
               About
-            </Link>
-            <Link href="#" className="text-white/70 hover:text-white transition block">
-              Services
             </Link>
             <Link href="#" className="text-white/70 hover:text-white transition block">
               Gallery
