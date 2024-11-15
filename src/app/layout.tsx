@@ -7,7 +7,7 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: 'Bright Scholars Aacademy',
+  title: 'Bright Scholars Academy',
   description: "Smart School Website.",
   keywords: ["kralis", "Netrobase", "school website template", "Education website", "Smart School website"],
   metadataBase: new URL("https://b.kralis.school/"),
